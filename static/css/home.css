@@ -1,0 +1,66 @@
+/*
+color: #1c8d76;
+*/
+
+body {
+    background-color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* CHANGE THE BGCOLOR TO WHITE*/
+    background: #2b2b2b;
+    overflow-x: hidden;
+}
+
+.icon_top_1 {
+    left: -2vw;
+    padding-top: 12vh;
+    position: relative;
+    color: white;
+}
+
+.icon_top_1:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_top_1::on-click {
+    color: #1c8d76;
+}
+
+.icon_top {
+    left: -2vw;
+    padding-top: 5vh;
+    position: relative;
+    color: white;
+}
+
+.icon_top:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_bottom_1 {
+    left: 1vw;
+    bottom: 10.0vh;
+    position: fixed;
+    color: white;
+}
+
+.icon_bottom_1:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_bottom_2 {
+    left: 1vw;
+    bottom: 2.0vh;
+    position: fixed;
+    color: white;
+}
+
+.icon_bottom_2:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
