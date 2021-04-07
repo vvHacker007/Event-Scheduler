@@ -1,8 +1,10 @@
 from flask import Flask,render_template,session,flash,url_for,request,redirect
-import pymongo as pm
+from dotenv import load_dotenv,find_dotenv
+import os
+load_dotenv(find_dotenv())
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = b'1\xd4\xa0\x90\xba1y\xf1$\x94%h\x17\x82\x02\x08'
+app.config['SECRET_KEY'] = os.getenv('APP_SECRET_KEY')
 @app.route('/',methods=['GET','POST'])
 def register():
     if request.method == 'POST':
