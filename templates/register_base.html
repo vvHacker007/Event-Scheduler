@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/css/register.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Event-Scheduler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="card-wrapper">
+        <!-- <div class="card">
+            <h1 class="center">Create an Account</h1>
+            <form name="signup_form">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="field" required>
+    
+                <label for="email">Email</label>
+                <input type="email" name="email" class="field" required>
+    
+                <label for="password">Password</label>
+                <input type="password" name="password" class="field" required>
+    
+                <p class="error error--hidden"></p>
+    
+                <input type="submit" value="Sign Up" class="btn">
+            </form>
+        </div> -->
+        <div class="card">
+            <h1 class="center">Log In</h1>
+            <form name="login_form" method="POST">
+    
+                <label for="email">Email</label>
+                <input type="email" name="email" class="field" required>
+    
+                <label for="password">Password</label>
+                <input type="password" name="password" class="field" required>
+    
+                <input type="submit" value="Log In" class="btn">
+            </form>
+            <div>
+                {% block content2 %} {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in messages %}
+                <p style="color:rgb(104, 38, 26); text-align: center;">{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %} {% endblock %}
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/scripts.js"></script>
+</body>
+</html>
