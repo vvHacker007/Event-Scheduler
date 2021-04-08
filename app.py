@@ -3,6 +3,24 @@ from dotenv import load_dotenv,find_dotenv
 import os
 load_dotenv(find_dotenv())
 
+todo = [
+    {
+        "task":"Study for CT",
+        "priority":"2"
+    },
+    {
+        "task":"Go to gym",
+        "priority":"1"
+    },
+    {
+        "task":"Go to market",
+        "priority":"5"
+    },
+    {
+        "task":"Go for jogging",
+        "priority":"3"
+    },
+]
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('APP_SECRET_KEY')
 @app.route('/',methods=['GET','POST'])
@@ -24,4 +42,20 @@ def register():
 
 @app.route('/user/')
 def home():
-    return render_template("home.html")
+    return render_template("base.html")
+
+@app.route('/calendar/')
+def calendar():
+    return render_template("calendar.html")
+
+@app.route('/todo/',methods=['GET','POST'])
+def todo():  
+    return render_template("todolist.html",todo=todo)
+
+@app.route('/stats/')
+def stats():
+    return render_template("stats.html")
+
+@app.route('/notes/')
+def notepad():
+    return render_template("notepad.html")
