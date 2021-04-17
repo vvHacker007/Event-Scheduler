@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Scheduler- Clock{% endblock %}
+{% block head %}
+<!--Homepage Styling-->
+<!-- <link href="../static/css/home.css" rel="stylesheet"> -->
+<link href="../static/css/clock.css" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<link rel="stylesheet" media="screen" href="../static/css/clock.css"/>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-12 text-center main-section">
+            <div id="myclock"></div>
+            <div id="alarm1" class="alarm"><a href="javascript:void(0)" id="turnOffAlarm">ALARM OFF</a></div><br>
+            <input type="text" id="altime" class="form-control mb-3" placeholder="hh:mm"/>
+            <a href="javascript:void(0)" id="set">set Alarm</a>
+        </div>
+    </div>
+</div>
+<br/><br/>
+<script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
+<script language="javascript" type="text/javascript" src="https://www.jqueryscript.net/demo/Customizable-Analog-Alarm-Clock-with-jQuery-Canvas-thooClock/js/jquery.thooClock.js"></script>
+<script src="../static/js/clock.js"></script>
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} {% endblock %}</title>
+    
+    <!-- Custom styles and scripts for this template -->
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> 
+    {% block head %} {% endblock %}
+
+</head>
+
+<body>
+    <h1 class="mainheading">
+        Event Scheduler
+    </h1>
+    <h2 class="username">
+        Hello User!
+    </h2>
+        <!--Navigation Bar-->
+        <nav class="sidenav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a classs="navbar-brand" href="#" alt="Scheduler"></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <a href="/stats/"><i class="icon_top_1 fas fa-chart-bar fa-2x" aria-hidden="true " alt="Stats "></i></a>
+                    <a href="/calendar/"><i class="icon_top fa fa-calendar fa-2x" aria-hidden="true " alt="Calendar "></i></a>
+                    <a href="/clock/"><i class="icon_top fas fa-clock fa-2x" aria-hidden="true " alt="Clock "></i></a>
+                    <a href="/todo/"><i class="icon_top fa fa-check fa-2x" aria-hidden="true " alt="Tasks "></i></a>
+                    <a href="/notes/"><i class="icon_top fas fa-sticky-note fa-2x" aria-hidden="true " alt="Notes "></i></a>
+                    <a href="/settings/"><i class="icon_bottom_2 fa fa-cog fa-2x" aria-hidden="true " alt="Settings "></i></a>
+                </ul>
+            </div>
+        </nav>
+        {% block content %} {% endblock %}
+</body>
+
+</html>

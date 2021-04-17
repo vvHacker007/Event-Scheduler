@@ -1,0 +1,227 @@
+body {
+    /* background-color: rgb(250, 237, 237); */
+    /* background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* CHANGE THE BGCOLOR TO WHITE*/
+    background: #2b2b2b;
+    overflow-x: hidden;
+}
+
+.icon_top_1 {
+    left: -0.4vw;
+    padding-top: 12vh;
+    position: relative;
+    color: white;
+}
+
+.icon_top_1:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_top_1::on-click {
+    color: #1c8d76;
+}
+
+.icon_top {
+    left: -0.4vw;
+    padding-top: 4.80vh;
+    position: relative;
+    color: white;
+}
+
+.icon_top:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_bottom_1 {
+    left: -0.4vw;
+    bottom: 10.0vh;
+    position: fixed;
+    color: white;
+}
+
+.icon_bottom_1:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_bottom_2 {
+    left: 1vw;
+    bottom: 2.0vh;
+    position: fixed;
+    color: white;
+}
+
+.icon_bottom_2:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.mainheading{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 2.7rem;
+}
+.username{
+    position: absolute;
+    top: 1%;
+    left: 70px;
+    padding: 10px 15px;
+    font-size: 2rem;
+}
+
+#stats{
+    margin-left: 65px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.schedule{
+    width: 48%;
+}
+.todo{
+    width: 48%;
+}
+.missed{
+    width: 48%;
+}
+.notes{
+    width: 48%;
+}
+
+.schedule,
+.todo,
+.missed,
+.notes{
+    border: 1px solid rgb(128, 66, 66);
+    box-shadow: 5px 5px 5px lightslategray;
+    border-radius: 5px;
+    margin: 20px 10px;
+    padding: 10px 16px;
+}
+
+#stats h3{
+    font-size: 1.7rem;
+    color: rgb(107 1 1);
+}
+
+.detailedPara{
+    padding: 6px 2px;
+    font-size: 1.2rem;
+}
+
+html body .card {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: 50px;
+  }
+  
+html body .card-header {
+background: #9db0da;
+color: #fff
+}
+
+html body .card-header .prevMonth {
+cursor: pointer
+}
+
+html body .card-header .nextMonth {
+cursor: pointer
+}
+
+html body .card-body {
+background: rgb(172, 196, 241)
+}
+
+html body .card-body .days span {
+background: #7580e2;
+color: #fff;
+border-radius: 50%;
+display: inline-block;
+height: 45px;
+width: 45px;
+line-height: 45px;
+cursor: pointer
+}
+
+html body .card-body .days span:hover {
+background: #ffffff
+}
+
+html body .card-body .dates span {
+background: #ffffff;
+color: #000;
+border-radius: 50%;
+display: inline-block;
+height: 45px;
+width: 45px;
+line-height: 45px;
+cursor: pointer
+}
+
+html body .card-body .dates span.active,
+html body .card-body .dates span:hover {
+background: #ffeef0;
+color: #000
+}
+
+html body .card-body .dates span.ntMonth {
+color: #938e8e;
+background: #d8dbff
+}
+
+html body .card-body .dates span.ntMonth:hover {
+background: #ffeef0;
+color: #000
+}
+
+html body .card#event .card-header .close {
+color: #fff;
+opacity: 1
+}
+
+html body .card#event .card-body .events-today {
+height: 210px;
+overflow-x: hidden
+}
+
+html body .card#event .card-body .events-input .data-invalid {
+border-color: #B5FFFC
+}
+
+html body .card#event .card-body .events-input .error {
+font-size: 12px;
+color: #B5FFFC;
+position: absolute;
+top: 100%
+}
+
+@media(max-width: 767px) {
+html body .card-body .days span {
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    font-size: .8rem
+}
+html body .card-body .dates span {
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    font-size: .8rem
+}
+html body .card#event .card-body .events-today {
+    height: 188px
+}
+}

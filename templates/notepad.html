@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block title %}Scheduler- Notepad{% endblock %}
+{% block head %}
+<!--Homepage Styling-->
+<!-- <link href="../static/css/home.css" rel="stylesheet">   -->
+<!--Notepad Styling-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+body {
+    /* background-color: rgb(250, 237, 237); */
+    /* background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* CHANGE THE BGCOLOR TO WHITE*/
+    background: #2b2b2b;
+    overflow-x: hidden;
+}
+
+.icon_top_1 {
+    left: -0.4vw;
+    padding-top: 12vh;
+    position: relative;
+    color: white;
+}
+
+.icon_top_1:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_top_1::on-click {
+    color: #1c8d76;
+}
+
+.icon_top {
+    left: -0.4vw;
+    padding-top: 4.80vh;
+    position: relative;
+    color: white;
+}
+
+.icon_top:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_bottom_1 {
+    left: -0.4vw;
+    bottom: 10.0vh;
+    position: fixed;
+    color: white;
+}
+
+.icon_bottom_1:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.icon_bottom_2 {
+    left: 1vw;
+    bottom: 2.0vh;
+    position: fixed;
+    color: white;
+}
+
+.icon_bottom_2:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.mainheading{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 2.7rem;
+}
+.username{
+    position: absolute;
+    top: 1%;
+    left: 70px;
+    padding: 10px 15px;
+    font-size: 2rem;
+}
+
+#stats{
+    margin-left: 65px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.schedule{
+    width: 48%;
+}
+.todo{
+    width: 48%;
+}
+.missed{
+    width: 48%;
+}
+.notes{
+    width: 48%;
+}
+
+.schedule,
+.todo,
+.missed,
+.notes{
+    border: 1px solid rgb(128, 66, 66);
+    box-shadow: 5px 5px 5px lightslategray;
+    border-radius: 5px;
+    margin: 20px 10px;
+    padding: 10px 16px;
+}
+
+#stats h3{
+    font-size: 1.7rem;
+    color: rgb(107 1 1);
+}
+
+.detailedPara{
+    padding: 6px 2px;
+    font-size: 1.2rem;
+}    
+</style>
+{% endblock %}
+{% block content %}
+<div class="container my-3">
+    <h1>Take your Notes here</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">
+                Add a Note
+                
+            </h5>
+            <div class="form-group">
+                <textarea class="form-control" 
+                    id="addTxt" rows="3">
+                </textarea>
+            </div>
+            <button class="btn btn-primary" 
+                id="addBtn" style=
+                "background-color:green">
+                Add Note
+            </button>
+        </div>
+    </div>
+    <hr>
+    <h1>Your Notes</h1>
+    <hr>
+        
+    <div id="notes" class=
+        "row container-fluid"> 
+    </div>
+</div>
+
+<script src="../static/js/notepad.js"></script>
+{% endblock %}

@@ -1,0 +1,69 @@
+$breakpoint-tablet: 767px;
+
+html{
+    body{background: #304adc;
+        .page-hero{
+            h3{font-size: 3rem;font-weight: bold;text-shadow: -1px -1px 1px #460000,2px 2px 1px #4964ff;text-transform: uppercase;color: #1d12bd;}
+            p{color: #acadf1;}
+        }
+        .card{border-radius: 15px;overflow: hidden;
+            &-header{background: #30375c; color: #fff;
+                .prevMonth{cursor: pointer;}
+                .nextMonth{cursor: pointer;}
+            }
+            &-body{background: #b1acf1;
+                .days{
+                    span{background: #8575e2;color: #fff;border-radius: 50%;display: inline-block;height: 45px;width: 45px;line-height: 45px;cursor: pointer;
+                        &:hover{background: #9d89f7;}
+                    }
+                }
+                .dates{
+                    span{background: #f4bdc6;color: #000;border-radius: 50%;display: inline-block;height: 45px;width: 45px;line-height: 45px;cursor: pointer;
+                        &.active,                       
+                        &:hover{background: #ffeef0;color: #000;}
+                        &.ntMonth{color: #938e8e;background: #ffd8de;
+                            &:hover{background: #ffeef0;color: #000;}
+                        }
+                    }
+                }
+            }
+            &#event{
+                .card-header{
+                    .close{color: #fff;opacity: 1;}
+                }
+                .card-body{
+                    .events-today{height: 210px;overflow-x: hidden;}
+                    .events-input{
+                        .data-invalid{border-color: blue;}
+                        .error{font-size: 12px;color: blue;position: absolute;top: 100%;}
+                    }
+                }
+                
+            }
+        }        
+    }
+}
+
+
+@media (max-width: $breakpoint-tablet) {
+    html{
+        body{
+            .pa-sm{position: absolute;}
+            .card{
+                &-body{
+                    .days{
+                        span{height: 38px;width: 38px;line-height: 38px;font-size: .8rem;}
+                    }
+                    .dates{
+                        span{height: 38px;width: 38px;line-height: 38px;font-size: .8rem;}
+                    }
+                }
+                &#event{
+                    .card-body{
+                        .events-today{height: 188px;}
+                    }
+                }
+            }
+        };
+    }
+}
